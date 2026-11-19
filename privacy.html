@@ -11,9 +11,6 @@
     <!-- Browser tab title -->
     <title>Privacy Policy | VIA ROMA</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/Privacy.png">
-
     <!-- Google Fonts: Fraunces and Epilogue -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,118 +21,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
 
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
     <style>
-
         /* 
-           1. WEBSITE COLORS AND FONTS
-           Change these values to update the design.
+           1. PRIVACY POLICY CONTENT
          */
-
-        :root {
-            --primary-color: #A6985C;
-            --neutral-color: #F2E8D5;
-            --text-color: #171717;
-
-            --heading-font: 'Fraunces', serif;
-            --body-font: 'Epilogue', sans-serif;
+        .text-outline-shadow {
+        color: #ffffff;
+        text-shadow: 
+            -1px -1px 0 #778394,  
+            1px -1px 0 #778394,
+            -1px  1px 0 #778394,
+            1px  1px 0 #778394;
         }
-
-        /* 
-           2. GENERAL PAGE STYLING
-         */
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--neutral-color);
-            color: var(--text-color);
-            font-family: var(--body-font);
-            font-size: 17px;
-            line-height: 1.5;
-
-            /* Keeps footer at bottom on short pages */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        /* Visible keyboard focus for accessibility */
-        a:focus-visible,
-        button:focus-visible {
-            outline: 3px solid #635D35;
-            outline-offset: 4px;
-        }
-
-        /* 
-           3. NAVIGATION BAR
-         */
-
-        .navbar {
-            background-color: var(--neutral-color);
-            padding: 14px 0;
-        }
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--text-color);
-            font-family: var(--heading-font);
-            font-size: 34px;
-            font-weight: 400;
-        }
-
-        /* Logo image */
-        .brand-logo {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
-        }
-
-        .navbar-brand:hover {
-            color: var(--text-color);
-        }
-
-        /* Navigation links */
-        .navbar-nav .nav-link {
-            color: var(--text-color);
-            font-family: var(--body-font);
-            font-size: 17px;
-            font-style: italic;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            margin-left: 18px;
-            transition: opacity 0.2s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            opacity: 0.6;
-        }
-
-        /* Mobile menu button */
-        .navbar-toggler {
-            border: 1px solid var(--text-color);
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        /* 
-           4. PRIVACY POLICY CONTENT
-         */
 
         .privacy-section {
             flex: 1;
@@ -144,6 +44,7 @@
 
         /* Main title */
         .privacy-title {
+            color: var(--primary-color);
             font-family: var(--heading-font);
             font-size: clamp(2.8rem, 6vw, 4.2rem);
             font-weight: 700;
@@ -193,133 +94,6 @@
             margin-bottom: 0;
         }
 
-        /* 
-           5. FOOTER
-         */
-
-        footer {
-            background-color: var(--primary-color);
-            padding: 23px 0;
-            margin-top: auto;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .footer-brand {
-            font-family: var(--body-font);
-            font-size: 16px;
-            font-weight: 700;
-            margin: 0;
-        }
-
-        .footer-link {
-            font-family: var(--body-font);
-            font-size: 16px;
-            font-weight: 700;
-            font-style: italic;
-            text-decoration: underline;
-            text-underline-offset: 4px;
-        }
-
-        .footer-link:hover {
-            opacity: 0.7;
-        }
-
-        /* 
-           6. TABLET RESPONSIVENESS
-         */
-
-        @media (max-width: 991px) {
-
-            .navbar-brand {
-                font-size: 29px;
-            }
-
-            .navbar-nav .nav-link {
-                margin-left: 0;
-                padding: 10px 0;
-            }
-
-            .privacy-section {
-                padding-top: 35px;
-            }
-        }
-
-        /* 
-           7. MOBILE RESPONSIVENESS
-         */
-
-        @media (max-width: 576px) {
-
-            body {
-                font-size: 15px;
-            }
-
-            .navbar {
-                padding: 8px 0;
-            }
-
-            .brand-logo {
-                width: 55px;
-                height: 55px;
-            }
-
-            .navbar-brand {
-                font-size: 25px;
-                gap: 9px;
-            }
-
-            .privacy-section {
-                padding: 30px 20px 40px;
-            }
-
-            .privacy-title {
-                font-size: clamp(2.3rem, 10vw, 3.2rem);
-            }
-
-            .updated-date {
-                font-size: 14px;
-                margin-bottom: 22px;
-            }
-
-            .policy-intro {
-                font-size: 15px;
-                margin-bottom: 24px;
-            }
-
-            .policy-item {
-                margin-bottom: 20px;
-            }
-
-            .policy-item h2 {
-                font-size: 17px;
-            }
-
-            .policy-item p {
-                font-size: 15px;
-            }
-
-            footer {
-                padding: 18px 15px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 8px;
-            }
-
-            .footer-brand,
-            .footer-link {
-                font-size: 14px;
-            }
-        }
-
     </style>
 </head>
 
@@ -337,7 +111,7 @@
 
                 <!-- LOGO AND BRAND NAME
                      Change the image path if your logo has a different name. -->
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand py-0" href="index.html">
 
                     <img
                         src="images/brand-logo.png"
@@ -345,7 +119,7 @@
                         class="brand-logo"
                     >
 
-                    <span>VIA ROMA</span>
+                    <span class="brand-text fw-regular">VIA ROMA</span>
 
                 </a>
 
@@ -412,7 +186,7 @@
         <div class="policy-content">
 
             <!-- Page heading -->
-            <h1 class="privacy-title">
+            <h1 class="privacy-title fw-bold text-outline-shadow">
                 Privacy Policy
             </h1>
 
