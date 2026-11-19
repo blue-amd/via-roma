@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>Privacy Policy | VIA ROMA</title>
+
+    <!-- Google Fonts: Fraunces and Epilogue -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,700;1,400;1,700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,700&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+
+        /* 
+           1. WEBSITE COLORS AND FONTS
+           Change these values to update the design.
+         */
+
+        :root {
+            --primary-color: #A6985C;
+            --neutral-color: #F2E8D5;
+            --text-color: #171717;
+
+            --heading-font: 'Fraunces', serif;
+            --body-font: 'Epilogue', sans-serif;
+        }
+
+        /* 
+           2. GENERAL PAGE STYLING
+         */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--neutral-color);
+            color: var(--text-color);
+            font-family: var(--body-font);
+            font-size: 17px;
+            line-height: 1.5;
+
+            /* Keeps footer at bottom on short pages */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Visible keyboard focus for accessibility */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #635D35;
+            outline-offset: 4px;
+        }
+
+        /* 
+           3. NAVIGATION BAR
+         */
+
+        .navbar {
+            background-color: var(--neutral-color);
+            padding: 14px 0;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-color);
+            font-family: var(--heading-font);
+            font-size: 34px;
+            font-weight: 400;
+        }
+
+        /* Logo image */
+        .brand-logo {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .navbar-brand:hover {
+            color: var(--text-color);
+        }
+
+        /* Navigation links */
+        .navbar-nav .nav-link {
+            color: var(--text-color);
+            font-family: var(--body-font);
+            font-size: 17px;
+            font-style: italic;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-left: 18px;
+            transition: opacity 0.2s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            opacity: 0.6;
+        }
+
+        /* Mobile menu button */
+        .navbar-toggler {
+            border: 1px solid var(--text-color);
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* 
+           4. PRIVACY POLICY CONTENT
+         */
+
+        .privacy-section {
+            flex: 1;
+            padding: 30px 20px 55px;
+        }
+
+        /* Main title */
+        .privacy-title {
+            font-family: var(--heading-font);
+            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1.15;
+        }
+
+        /* Last updated date */
+        .updated-date {
+            font-family: var(--body-font);
+            font-size: 17px;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* Keeps policy text readable */
+        .policy-content {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .policy-intro {
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        /* Individual policy sections */
+        .policy-item {
+            margin-bottom: 23px;
+        }
+
+        .policy-item h2 {
+            font-family: var(--heading-font);
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+
+        .policy-item p {
+            font-family: var(--body-font);
+            font-size: 17px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        /* 
+           5. FOOTER
+         */
+
+        footer {
+            background-color: var(--primary-color);
+            padding: 23px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-brand {
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .footer-link {
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 700;
+            font-style: italic;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .footer-link:hover {
+            opacity: 0.7;
+        }
+
+        /* 
+           6. TABLET RESPONSIVENESS
+         */
+
+        @media (max-width: 991px) {
+
+            .navbar-brand {
+                font-size: 29px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 10px 0;
+            }
+
+            .privacy-section {
+                padding-top: 35px;
+            }
+        }
+
+        /* 
+           7. MOBILE RESPONSIVENESS
+         */
+
+        @media (max-width: 576px) {
+
+            body {
+                font-size: 15px;
+            }
+
+            .navbar {
+                padding: 8px 0;
+            }
+
+            .brand-logo {
+                width: 55px;
+                height: 55px;
+            }
+
+            .navbar-brand {
+                font-size: 25px;
+                gap: 9px;
+            }
+
+            .privacy-section {
+                padding: 30px 20px 40px;
+            }
+
+            .privacy-title {
+                font-size: clamp(2.3rem, 10vw, 3.2rem);
+            }
+
+            .updated-date {
+                font-size: 14px;
+                margin-bottom: 22px;
+            }
+
+            .policy-intro {
+                font-size: 15px;
+                margin-bottom: 24px;
+            }
+
+            .policy-item {
+                margin-bottom: 20px;
+            }
+
+            .policy-item h2 {
+                font-size: 17px;
+            }
+
+            .policy-item p {
+                font-size: 15px;
+            }
+
+            footer {
+                padding: 18px 15px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .footer-brand,
+            .footer-link {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+         HEADER / NAVIGATION
+     -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid px-4 px-lg-5">
+
+                <!-- LOGO AND BRAND NAME
+                     Change the image path if your logo has a different name. -->
+                <a class="navbar-brand" href="index.html">
+
+                    <img
+                        src="images/brand-logo.png"
+                        alt="VIA ROMA logo"
+                        class="brand-logo"
+                    >
+
+                    <span>VIA ROMA</span>
+
+                </a>
+
+                <!-- Mobile navigation toggle -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse"
+                     id="mainNavigation">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- 
+         MAIN CONTENT
+     -->
+
+    <main class="privacy-section">
+
+        <div class="policy-content">
+
+            <!-- Page heading -->
+            <h1 class="privacy-title">
+                Privacy Policy
+            </h1>
+
+            <!-- Update date -->
+            <p class="updated-date">
+                Last updated: November 2026
+            </p>
+
+
+            <!-- Introduction -->
+            <p class="policy-intro">
+
+                VIA ROMA respects your privacy. This policy explains
+                how information provided through our website may be
+                collected and used when you contact us or place an order.
+
+            </p>
+
+
+            <!-- POLICY 1 -->
+            <section class="policy-item">
+
+                <h2>1. Information We Collect</h2>
+
+                <p>
+                    We may receive information you choose to provide,
+                    such as your name, email address, and order details
+                    when you submit an inquiry or send an order request.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 2 -->
+            <section class="policy-item">
+
+                <h2>2. How We Use Your Information</h2>
+
+                <p>
+                    Information you provide may be used to respond to
+                    inquiries, process order requests, confirm product
+                    details, and communicate with you about your order.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 3 -->
+            <section class="policy-item">
+
+                <h2>3. How Our Contact and Order Forms Work</h2>
+
+                <p>
+                    Our contact form and Order Now buttons open your own
+                    email app with a message already written. Nothing is
+                    sent until you press send in your email app. Your
+                    message is then delivered to us by your email provider,
+                    and our website does not store it.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 4 -->
+            <section class="policy-item">
+
+                <h2>4. Sharing of Information</h2>
+
+                <p>
+                    We do not intend to sell your personal information.
+                    Information may be shared when necessary to respond
+                    to your request or comply with applicable legal
+                    requirements.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 5 -->
+            <section class="policy-item">
+
+                <h2>5. Cookies and Third-Party Services</h2>
+
+                <p>
+                    Our website does not ask you to create an account.
+                    It loads fonts and design files from outside services,
+                    and it is hosted on GitHub Pages. These services may
+                    receive basic technical information such as your IP
+                    address when your browser loads the page.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 6 -->
+            <section class="policy-item">
+
+                <h2>6. Data Protection</h2>
+
+                <p>
+                    We take reasonable steps to protect the information
+                    provided to us. However, no method of electronic
+                    transmission or storage can be guaranteed to be
+                    completely secure.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 7 -->
+            <section class="policy-item">
+
+                <h2>7. How Long We Keep Information</h2>
+
+                <p>
+                    We keep emails about inquiries and orders only as
+                    long as needed to answer you, complete your order,
+                    and keep basic order records.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 8 -->
+            <section class="policy-item">
+
+                <h2>8. Your Choices</h2>
+
+                <p>
+                    You may contact us to ask about the personal
+                    information you have provided or request assistance
+                    regarding its correction or deletion, subject to
+                    applicable requirements.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 9 -->
+            <section class="policy-item">
+
+                <h2>9. Changes to This Policy</h2>
+
+                <p>
+                    We may update this Privacy Policy from time to time.
+                    Any changes will be reflected on this page along
+                    with an updated revision date.
+                </p>
+
+            </section>
+
+
+            <!-- POLICY 10 -->
+            <section class="policy-item">
+
+                <h2>10. Contact Us</h2>
+
+                <p>
+                    If you have questions about this Privacy Policy,
+                    please contact VIA ROMA through our
+                    <a href="contact.html">Contact page</a>.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- 
+         FOOTER
+     -->
+
+    <footer>
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <div class="footer-content">
+
+                <!-- Footer brand -->
+                <p class="footer-brand">
+                    Via Roma © 2026
+                </p>
+
+                <!-- Link to current Privacy Policy page -->
+                <a href="privacy.html" class="footer-link"
+                   aria-current="page">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript
+         Required for the responsive mobile navigation menu. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
