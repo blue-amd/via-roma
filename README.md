@@ -1,4 +1,6 @@
- # VIA ROMA 
+ # via-roma 
+
+### VIA ROMA
 
  **Every path begins with a classic.**
 
@@ -26,6 +28,14 @@ Official website repository for the **Via Roma** clothing brand.
 | Heading font | Fraunces |
 | Body font | Epilogue |
 
+## WebWeavers:
+ 
+| Member | GitHub |
+|---|---|
+| Ashley Mae T. Cavada | @atcavada-bot | 
+| Anika Kim M. Dones | @blue-amd | 
+| Mary Loise Hope E. Legamia | @lluwiss | 
+| Jino Carlo C. Magan | @username | 
+| Anjelaine M. Natal | @username | 
 
-
-*This website was created for a school assignment. The store name, email addresses, and products are used for learning purposes only.*
+*This website was created for a course assignment. The store name, email addresses, and products are used for learning purposes only.*
