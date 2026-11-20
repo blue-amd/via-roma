@@ -1,92 +1,230 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Via Roma | Do-Good-Work-Tee</title>
 
-  <!-- Favicon -->
-<link rel="icon"
-      type="image/png"
-      href="images/Shop.png"
-      sizes="32x32">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="css/product.css">
-  
-</head>
-<body>
-  <div class="site-shell">
-    <main class="product-page">
-      <header class="site-header">
-        <a class="brand" href="index.html">VIA ROMA</a>
-        <nav class="main-nav">
-          <a href="index.html">Home</a><a href="#about">About</a><a href="index.html#shop">Shop</a><a href="#contact">Contact</a>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/product.css">
+
+
+    <!-- HEADER / NAVIGATION -->
+
+    <header class="product-header">
+
+        <a href="index.html" class="product-brand">
+
+            <img src="images/brand-logo.png"
+                 alt="VIA ROMA logo">
+
+            <span>VIA ROMA</span>
+
+        </a>
+
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="product-nav" aria-label="Main navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="index.html#shop">Shop</a>
+
+            <a href="contact.html">Contact</a>
+
         </nav>
-      </header>
 
-      <section class="product-layout">
-        <div class="gallery">
-          <div class="thumbnail-list">
-            <button class="thumbnail active" data-image="assets/good-work-tee.png.svg" aria-label="Main product view"><img src="assets/daily-tee.svg" alt=""></button>
-            <button class="thumbnail" data-image="assets/tee-blue.svg" aria-label="Blue tee view"><img src="assets/tee-blue.svg" alt=""></button>
-            <button class="thumbnail" data-image="assets/tee-beige.svg" aria-label="Beige tee view"><img src="assets/tee-beige.svg" alt=""></button>
-            <span class="gallery-caret">⌄</span>
-          </div>
-          <div class="main-image"><img id="mainProductImage" src="assets/daily-tee.svg" alt="Daily Tee"></div>
+    </header>
+
+
+
+    <!-- Product Info-->
+
+    <main class="product-main">
+
+        <div class="product-container">
+
+            <section class="product-layout">
+
+
+                <!-- PRODUCT IMAGE GALLERY -->
+                <div class="gallery">
+
+                    <!-- THUMBNAILS -->
+                    <div class="thumbnail-list">
+
+                        <!-- MAIN PRODUCT IMAGE -->
+                        <button class="thumbnail active"
+                                type="button"
+                                data-image="images/do-good-work-tee.jpg"
+                                aria-label="View front of shirt">
+
+                            <img src="images/do-good-work-tee.jpg"
+                                 alt="Do Good Work Tee front view">
+
+                        </button>
+
+
+                        <button class="thumbnail"
+                                type="button"
+                                data-image="images/do-good-work-tee.jpg"
+                                aria-label="View alternate shirt image">
+
+                            <img src="images/do-good-work-tee.jpg"
+                                 alt="Do Good Work Tee alternate view">
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- MAIN DISPLAY IMAGE -->
+                    <div class="main-image">
+
+                        <img id="mainProductImage"
+                             src="images/do-good-work-tee.jpg"
+                             alt="Do Good Work Tee">
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PRODUCT DETAILS -->
+                <div class="product-info">
+
+                    <span class="collection-label">
+                        NEW ARRIVAL
+                    </span>
+
+
+                    <!-- PRODUCT NAME -->
+                    <h1 class="product-title">
+                        Do Good Work Tee
+                    </h1>
+
+
+                    <!-- PRICE -->
+                    <p class="product-price">
+                        ₱499.00
+                    </p>
+
+
+                    <!-- DESCRIPTION -->
+                    <p class="product-description">
+                        A clean everyday staple with a subtle blue
+                        detail and a comfortable fit. Made for
+                        everyday movement and effortless styling.
+                    </p>
+
+
+                    <hr class="product-divider">
+
+
+                    <!-- SIZE SELECTION -->
+                    <p class="size-label">
+                        Size: <strong id="selectedSize">S</strong>
+                    </p>
+
+                    <div class="size-options" aria-label="Choose a size">
+
+                        <button type="button"
+                                class="size-btn selected"
+                                data-size="S">S</button>
+
+                        <button type="button"
+                                class="size-btn"
+                                data-size="M">M</button>
+
+                        <button type="button"
+                                class="size-btn"
+                                data-size="L">L</button>
+
+                        <button type="button"
+                                class="size-btn"
+                                data-size="XL">XL</button>
+
+                    </div>
+
+
+
+                    <!-- QUANTITY SELECTION -->
+                    <div class="quantity-row">
+
+                        <span>Quantity:</span>
+
+                        <button type="button"
+                                class="quantity-btn"
+                                id="decreaseQty"
+                                aria-label="Decrease quantity">
+                            −
+                        </button>
+
+                        <output id="quantity" aria-live="polite">1</output>
+
+                        <button type="button"
+                                class="quantity-btn"
+                                id="increaseQty"
+                                aria-label="Increase quantity">
+                            +
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- BUY NOW -->
+                    <button type="button"
+                            class="buy-button"
+                            id="buyNow">
+
+                        Buy Now
+
+                    </button>
+
+
+                    <!-- FEEDBACK MESSAGE -->
+                    <p class="status-message"
+                       id="statusMessage"
+                       role="status"
+                       aria-live="polite"></p>
+
+                </div>
+
+            </section>
+
         </div>
 
-        <div class="product-info">
-          <div class="collection-label">NEW ARRIVAL <span>●</span> NEW ARRIVAL <span>●</span> NEW ARRIVAL <span>●</span> NEW ARRIVAL</div>
-          <h1>Daily Tee</h1>
-          <div class="rating-row"><span class="stars">★★★★★</span><small>4.8 (25 reviews)</small></div>
-          <p class="price">₱499.00</p>
-          <p class="description">Your everyday essential. A versatile tee designed for comfort and effortless styling.</p>
-
-          <div class="size-options" aria-label="Choose a size">
-            <button class="size-btn selected" data-size="S">S</button>
-            <button class="size-btn" data-size="M">M</button>
-            <button class="size-btn" data-size="L">L</button>
-            <button class="size-btn" data-size="XL">XL</button>
-          </div>
-
-          <div class="purchase-row">
-            <div class="quantity-control">
-              <button id="decreaseQty" aria-label="Decrease quantity">−</button>
-              <output id="quantity">1</output>
-              <button id="increaseQty" aria-label="Increase quantity">+</button>
-            </div>
-            <button class="add-cart" id="addToCart"><i class="bi bi-cart3"></i> Add to Cart <span id="cartCount">0</span></button>
-          </div>
-          <button class="buy-now" id="buyNow"><i class="bi bi-lightning-charge-fill"></i> Buy Now</button>
-
-          <div class="accordion product-accordion" id="productAccordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#details">Product Details</button></h2>
-              <div id="details" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Relaxed everyday fit. Add the exact fabric, measurements, and care instructions for this product here.</div></div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#shipping">Shipping &amp; Returns</button></h2>
-              <div id="shipping" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Add your shipping fees, delivery estimates, and return or exchange policy here.</div></div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#warranty">Warranty</button></h2>
-              <div id="warranty" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Add the warranty terms applicable to this item here.</div></div>
-            </div>
-          </div>
-          <p id="statusMessage" class="status-message" role="status"></p>
-        </div>
-      </section>
     </main>
-    <footer class="site-footer"><span>Via Roma © 2026</span><a href="#privacy">Privacy Policy</a></footer>
-  </div>
 
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="cartToast" class="toast"><div class="toast-header"><strong class="me-auto">Via Roma</strong><button class="btn-close" data-bs-dismiss="toast"></button></div><div class="toast-body" id="toastMessage">Added to cart.</div></div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+
+
+    <!-- FOOTER -->
+
+    <footer class="product-footer">
+
+        <div class="product-footer-content">
+
+            <p>Via Roma © 2026</p>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
