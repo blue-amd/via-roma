@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Via Roma | Don't Be Late Tee</title>
+
+  <!-- Favicon -->
+<link rel="icon"
+      type="image/png"
+      href="images/Shop.png"
+      sizes="32x32">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+    <!-- 
+         HEADER / NAVIGATION
+     -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid px-4 px-lg-5">
+
+                <!-- LOGO AND BRAND NAME
+                     Change the image path if your logo has a different name. -->
+                <a class="navbar-brand py-0" href="index.html">
+
+                    <img
+                        src="images/brand-logo.png"
+                        alt="VIA ROMA logo"
+                        class="brand-logo"
+                    >
+
+                    <span class="brand-text fw-regular">VIA ROMA</span>
+
+                </a>
+
+                <!-- Mobile navigation toggle -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavigation"
+                    aria-controls="mainNavigation"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse"
+                     id="mainNavigation">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#shop">
+                                Shop
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Home page CSS -->
+    <style>
+
+        /* Body text size for the whole page content */
+        main {
+            font-size: 20px;
+        }
+
+        /* Light-blue text with a thin outline so it is readable on cream */
+        .text-outline-shadow {
+            color: var(--primary-color);
+            text-shadow:
+                -1px -1px 0 #778394,
+                 1px -1px 0 #778394,
+                -1px  1px 0 #778394,
+                 1px  1px 0 #778394;
+        }
+    </style>
+
+<!--Product Layout-->
+
+      <section class="product-layout">
+        <div class="gallery">
+          <div class="thumbnail-list">
+            <button class="thumbnail active" data-image="images/do-good-work-tee.jpg" aria-label="Front product view">
+              <img src="images/everyday-front.png" alt="Front view of Everyday Comfort Tee">
+            </button>
+            <button class="thumbnail" data-image="images/everyday-back.png" aria-label="Back product view">
+              <img src="images/everyday-back.png" alt="Back view of Everyday Comfort Tee">
+            </button>
+          </div>
+
+          <div class="main-image">
+            <img id="mainProductImage" src="images/everyday-comfort-tee.jpg" alt="Everyday Comfort Tee">
+          </div>
+        </div>
+
+        <div class="product-info">
+          <div class="collection-label">NEW ARRIVAL</div>
+          <h1 class="product-title">Everyday Comfort Tee</h1>
+          <p class="product-price">₱499.00</p>
+          <p class="product-description">Your everyday essential. A versatile tee designed for comfort and effortless styling.</p>
+
+          <hr class="product-divider">
+
+          <p class="size-label">Size: <strong id="selectedSize">(Size Name)</strong></p>
+          <div class="size-options" aria-label="Choose a size">
+            <button class="size-btn" data-size="S">S</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="L">L</button>
+            <button class="size-btn" data-size="XL">XL</button>
+          </div>
+
+          <div class="quantity-row">
+            <span>Quantity:</span>
+              <button class="quantity-btn" id="increaseQuantity" aria-label="Increase quantity">+</button>
+              <output class="quantity" id="quantity">1</output>
+              <button class="quantity-btn" id="decreaseQuantity" aria-label="Decrease quantity">−</button>
+          </div>
+
+          <button class="buy-button" id="buyNow">Buy Now</button>
+          <p id="statusMessage" class="status-message" role="status"></p>
+        </div>
+      </section>
+    </main>
+    <!-- 
+        FOOTER
+     -->
+
+    <footer>
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <div class="footer-content">
+
+                <!-- Footer brand -->
+                <p class="footer-brand">
+                    Via Roma © 2026
+                </p>
+
+                <!-- Link to current Privacy Policy page -->
+                <a href="privacy.html" class="footer-link"
+                   aria-current="page">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast"><div class="toast-header"><strong class="me-auto">Via Roma</strong><button class="btn-close" data-bs-dismiss="toast"></button></div><div class="toast-body" id="toastMessage">Added to cart.</div></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+    <!-- Buy button functionality -->
+    <script>
+
+      const mainProductImage = document.getElementById('mainProductImage');
+      const thumbnails = document.querySelectorAll('.thumbnail');
+
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+          // Update the main product image
+          const thumbnailImage = thumbnail.querySelector('img');
+          mainProductImage.src = thumbnailImage.src;
+          // Update the active thumbnail
+          thumbnails.forEach(t => t.classList.remove('active'));
+          thumbnail.classList.add('active');
+        });
+      });
+
+      const sizeButtons = document.querySelectorAll('.size-btn');
+      const selectedSizeElement = document.getElementById('selectedSize');
+      const sizeNames = {
+        'S': 'Small',
+        'M': 'Medium',
+        'L': 'Large',
+        'XL': 'Extra Large'
+      };
+
+      sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update the selected size display
+          const size = button.getAttribute('data-size');
+          selectedSizeElement.textContent = sizeNames[size];
+
+          // Update the active size button
+          sizeButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+        });
+      });
+
+      const increaseBtn = document.getElementById('increaseQuantity');
+      const decreaseBtn = document.getElementById('decreaseQuantity');
+      const quantityOutput = document.getElementById('quantity');
+
+      if (increaseBtn && decreaseBtn && quantityOutput) {
+        increaseBtn.addEventListener('click', () => {
+          let currentQuantity = parseInt(quantityOutput.value);
+          quantityOutput.value = currentQuantity + 1;
+        });
+
+        decreaseBtn.addEventListener('click', () => {
+          let currentQuantity = parseInt(quantityOutput.value);
+          if (currentQuantity > 1) {
+            quantityOutput.value = currentQuantity - 1;
+          }
+        });
+      }
+
+      const buyNowButton = document.getElementById('buyNow');
+      const statusMessage = document.getElementById('statusMessage');
+
+      if (buyNowButton && statusMessage) {
+        buyNowButton.addEventListener('click', () => {
+          const productTitle = document.querySelector('.product-title').textContent;
+          const productPrice = document.querySelector('.product-price').textContent;
+          const selectedSize = selectedSizeElement.textContent;
+          const quantity = quantityOutput.value;
+          const numericalPrice = parseFloat(productPrice.replace('₱', '').replace(',', ''));
+
+          const subject = `Order: ${productTitle} - ₱${numericalPrice.toFixed(2)} - Size: ${selectedSize} - Quantity: ${quantity}`;
+          const body = `Hello Via Roma,\n\nI would like to place an order for the following item:\n\nProduct: ${productTitle}\nPrice: ${productPrice}\nSize: ${selectedSize}\nQuantity: ${quantity}\n\nThank you!`;
+
+          const mailtoLink = `mailto:orders@examplewebsite142.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          window.location.href = mailtoLink;
+        });
+      }
+    </script>
+
+</body>
+</html>
