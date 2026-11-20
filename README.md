@@ -35,7 +35,7 @@ Official website repository for the **Via Roma** clothing brand.
 | Ashley Mae T. Cavada | @atcavada-bot | 
 | Anika Kim M. Dones | @blue-amd | 
 | Mary Loise Hope E. Legamia | @lluwiss | 
-| Jino Carlo C. Magan | @username | 
+| Jino Carlo C. Magan | @jcmagan-hub | 
 | Anjelaine M. Natal | @anjulaine| 
 
 *This website was created for a course assignment. The store name, email addresses, and products are used for learning purposes only.*
