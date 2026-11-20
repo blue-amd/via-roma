@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Via Roma | Do-Good-Work-Tee</title>
+  <title>Via Roma | Do Good Work Tee</title>
 
   <!-- Favicon -->
 <link rel="icon"
@@ -12,8 +12,9 @@
       sizes="32x32">
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/style.css">
+  
   <link rel="stylesheet" href="css/product.css">
   
 </head>
@@ -22,15 +23,29 @@
     <main class="product-page">
       <header class="site-header">
         <a class="brand" href="index.html">VIA ROMA</a>
-        <nav class="main-nav">
-          <a href="index.html">Home</a><a href="#about">About</a><a href="index.html#shop">Shop</a><a href="#contact">Contact</a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#shop">Shop</a>
+          <a href="contact.html">Contact</a>
         </nav>
+
       </header>
 
       <section class="product-layout">
         <div class="gallery">
+         
           <div class="thumbnail-list">
-            <button class="thumbnail active" data-image="assets/good-work-tee.png.svg" aria-label="Main product view"><img src="assets/daily-tee.svg" alt=""></button>
+            <button class="thumbnail active" 
+              data-image="assets/good-work-tee.png.svg" 
+              aria-label="Main product view">
+              
+              <img src="assets/daily-tee.svg" 
+                alt=""></button>
+
+            </button>
+            
             <button class="thumbnail" data-image="assets/tee-blue.svg" aria-label="Blue tee view"><img src="assets/tee-blue.svg" alt=""></button>
             <button class="thumbnail" data-image="assets/tee-beige.svg" aria-label="Beige tee view"><img src="assets/tee-beige.svg" alt=""></button>
             <span class="gallery-caret">⌄</span>
@@ -40,10 +55,13 @@
 
         <div class="product-info">
           <div class="collection-label">NEW ARRIVAL <span>●</span> NEW ARRIVAL <span>●</span> NEW ARRIVAL <span>●</span> NEW ARRIVAL</div>
-          <h1>Daily Tee</h1>
+          
+          <h1>Do Good Work Tee</h1>
           <div class="rating-row"><span class="stars">★★★★★</span><small>4.8 (25 reviews)</small></div>
           <p class="price">₱499.00</p>
-          <p class="description">Your everyday essential. A versatile tee designed for comfort and effortless styling.</p>
+          <p class="description">A simple reminder to show up, get moving, and make the most of the day.</p>
+  
+
 
           <div class="size-options" aria-label="Choose a size">
             <button class="size-btn selected" data-size="S">S</button>
@@ -64,6 +82,7 @@
 
           <div class="accordion product-accordion" id="productAccordion">
             <div class="accordion-item">
+              
               <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#details">Product Details</button></h2>
               <div id="details" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Relaxed everyday fit. Add the exact fabric, measurements, and care instructions for this product here.</div></div>
             </div>
@@ -72,6 +91,7 @@
               <div id="shipping" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Add your shipping fees, delivery estimates, and return or exchange policy here.</div></div>
             </div>
             <div class="accordion-item">
+              
               <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#warranty">Warranty</button></h2>
               <div id="warranty" class="accordion-collapse collapse" data-bs-parent="#productAccordion"><div class="accordion-body">Add the warranty terms applicable to this item here.</div></div>
             </div>
