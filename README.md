@@ -14,9 +14,9 @@ Official website repository for the **Via Roma** clothing brand.
  
 | What | Link |
 |---|---|
-| Live website (GitHub Pages) |  |
+| Live website (GitHub Pages) | https://blue-amd.github.io/via-roma/ |
 | Figma visual mockups | https://www.figma.com/design/3UGhVitVuAJAF1hui8QMnd/MMS142_A2_WebWeavers?node-id=28-203&t=1ZM6jLUInIWniUnz-1 |
-| Source code (this repo) |  |
+| Source code (this repo) | https://github.com/blue-amd/via-roma |
 
 ## Brand kit
  
