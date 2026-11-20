@@ -29,7 +29,7 @@
 
         /* Body text size for the whole page content */
         main {
-            font-size: 18px;
+            font-size: 20px;
         }
 
         /* Light-blue text with a thin outline so it is readable on cream */
@@ -43,32 +43,53 @@
         }
 
         /* Olive button (dark text for contrast) */
-        .via-button {
-            display: inline-block;
-            padding: 12px 28px;
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            font-family: var(--heading-font);
-            font-size: 22px;
+        .via-button-olive {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 30px;
+            background-color: var(--text-color-dark);
+            color: var(--button-color);
+            font-family: var(--body-font);
+            font-size: 19px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 7px;
+            transition: opacity 0.2s ease;
+        }
+
+        /* Beige button (dark text for contrast) */
+        .via-button-beige {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 30px;
+            background-color: var(--button-color);
+            color: var(--text-color-dark);
+            font-family: var(--body-font);
+            font-size: 19px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 7px;
+            transition: opacity 0.2s ease;
         }
 
         .via-button:hover {
-            color: var(--text-color);
+            color: var(--button-color);
             opacity: 0.8;
         }
 
         /* Olive frame with a white rounded card inside */
         .image-frame {
             background-color: var(--secondary-color);
-            padding: 18px;
+            border-radius: 26px;
+            padding: 20px;
         }
 
         .image-inner {
             background-color: #ffffff;
-            border-radius: 28px;
-            padding: 18px;
+            border-radius: 18px;
+            padding: 20px;
         }
 
         .image-inner img {
@@ -79,24 +100,25 @@
 
         /* Hero */
         .hero {
-            padding: 40px 0 80px;
+            padding: 40px 0 90px;
         }
 
         .hero-title {
             font-family: var(--heading-font);
-            font-size: 3rem;
-            line-height: 1.05;
+            font-size: 3.2rem;
+            line-height: 0.98;
+            max-width: 500px;
         }
 
         /* About */
         .about-section {
-            padding: 40px 0 30px;
+            padding: 40px 0 50px;
         }
 
         .about-title {
             font-family: var(--heading-font);
-            font-size: 2.8rem;
-            line-height: 1;
+            font-size: 3rem;
+            line-height: 1.02;
         }
 
         /* Brand row */
@@ -130,7 +152,7 @@
         }
 
         .price {
-            font-family: var(--heading-font);
+            font-family: var(--body-font);
             font-size: 20px;
         }
 
@@ -244,12 +266,12 @@
                             Every path begins with a classic.
                         </h1>
 
-                        <p>Minimalist essentials for everyday living.</p>
-                        <p>Discover timeless T-shirts designed for comfort and effortless style.</p>
+                        <p class="fst-italic">Minimalist essentials for everyday living.</p>
+                        <p class="fst-italic">Discover timeless T-shirts designed for comfort and effortless style.</p>
 
                         <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="index.html#shop" class="via-button">Shop Now</a>
-                            <a href="index.html#about" class="via-button">Learn More<span class="visually-hidden"> about VIA ROMA</span></a>
+                            <a href="index.html#shop" class="via-button-olive">Shop Now</a>
+                            <a href="index.html#about" class="via-button-beige">Learn More<span class="visually-hidden"> about VIA ROMA</span></a>
                         </div>
 
                     </div>
@@ -257,7 +279,7 @@
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="image-frame">
                             <div class="image-inner">
-                                <img src="images/hero-shirt.png" alt="VIA ROMA classic t-shirt">
+                                <img src="images/dontbelate-back.png" alt="VIA ROMA classic t-shirt">
                             </div>
                         </div>
                     </div>
@@ -277,7 +299,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <p>
+                        <p class="fst-italic">
                             VIA ROMA believes in the beauty of simplicity.
                             We offer everyday T-shirt essentials designed to
                             fit seamlessly into your wardrobe.
@@ -296,7 +318,7 @@
                 <div class="brand-row d-flex justify-content-center align-items-center gap-3">
                     <img src="images/brand-logo.png" alt="">
                     <p class="brand-name fw-bold text-outline-shadow mb-0">VIA ROMA</p>
-                    <img src="images/brand-logo.png" alt="" class="flip">
+                    <img src="images/brand-logo.png" alt="">
                 </div>
 
                 <p class="fst-italic mt-2">Every path begins with a classic.</p>
@@ -319,9 +341,9 @@
                                 <img src="images/do-good-work-tee.jpg" alt="Do Good Work Tee">
                             </div>
                         </div>
-                        <h3 class="product-name">Do Good Work Tee</h3>
+                        <h3 class="product-name fst-italic">Do Good Work Tee</h3>
                         <p class="price fw-bold">₱499.00</p>
-                        <a href="do-good-work.html" class="via-button">View Product<span class="visually-hidden">: Do Good Work Tee</span></a>
+                        <a href="do-good-work.html" class="via-button-olive">View Product<span class="visually-hidden">: Do Good Work Tee</span></a>
                     </div>
 
                     <div class="col-md-4">
@@ -330,9 +352,9 @@
                                 <img src="images/dont-be-late-tee.jpg" alt="Don't Be Late Tee">
                             </div>
                         </div>
-                        <h3 class="product-name">Don't Be Late Tee</h3>
+                        <h3 class="product-name fst-italic">Don't Be Late Tee</h3>
                         <p class="price fw-bold">₱499.00</p>
-                        <a href="dont-be-late.html" class="via-button">View Product<span class="visually-hidden">: Don't Be Late Tee</span></a>
+                        <a href="dont-be-late.html" class="via-button-olive">View Product<span class="visually-hidden">: Don't Be Late Tee</span></a>
                     </div>
 
                     <div class="col-md-4">
@@ -341,9 +363,9 @@
                                 <img src="images/everyday-comfort-tee.jpg" alt="Everyday Comfort Tee">
                             </div>
                         </div>
-                        <h3 class="product-name">Everyday Comfort Tee</h3>
+                        <h3 class="product-name fst-italic">Everyday Comfort Tee</h3>
                         <p class="price fw-bold">₱499.00</p>
-                        <a href="everyday-comfort.html" class="via-button">View Product<span class="visually-hidden">: Everyday Comfort Tee</span></a>
+                        <a href="everyday-comfort.html" class="via-button-olive">View Product<span class="visually-hidden">: Everyday Comfort Tee</span></a>
                     </div>
 
                 </div>
